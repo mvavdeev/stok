@@ -1,0 +1,10 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <% if params[:easter_egg] %>
+    <h2 class="text-center">
+      <%= params[:easter_egg] %>
+    </h2>
+  <% else %>
+    <h2 class="text-center">Featured Photos</h2>
+  <% end %>
+  <%= render 'shared/carousel' %>
+</div>

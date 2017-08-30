@@ -1,0 +1,21 @@
+<div class="col-md-12 product-layout text-center">
+  <header class="page-header">
+    <h3><%= @product.name %></h3>
+  </header>
+  <article class="product-body">
+    <%= image_tag(@product.image_url, class: "img-zoom img-responsive", data_zoom_image: @product.image_url ) %>
+    <header class="product-header">
+      <h4><%= @product.name %></h4>
+    </header>
+    <p><%= @product.description %></p><br><br>
+    <p><strong><%= number_to_currency(@product.price, precision: 2) %></strong></p>
+    <p class="col-md-12"><small class="col-md-6 col-md-offset-3">Following your purchase; this photo will be provided royalty free for use for virtually any purpose!</small></p>
+    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+  </article>
+
+  <%= form_tag '/payments/create' do %>
+    <%= render 'shared/stripe_checkout_button' %>
+    <%= hidden_field_tag(:product_id, @product.id) %>
+  <% end %>
+  <br>
+</div>

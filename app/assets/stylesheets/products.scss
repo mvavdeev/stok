@@ -1,0 +1,74 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.products-margin {
+  margin-top: 20px;
+}
+
+.products-box {
+  textarea, input {
+    color: #323232;
+  }
+}
+
+.product-layout {
+  a {
+    text-decoration: none;
+    color: #010609;
+  }
+
+  background-color: #FFFEFE;
+}
+
+.product-header {
+  h4 {
+    font-size: 16px;
+  }
+  min-height: 45px;
+}
+
+.product-body {
+  min-height: 340px;
+  background-color: #F1F1F1;
+  border-radius: 3px;
+  border: solid 1px #E9E9E9;
+          transition: all 0.5s ease-in-out .01s;
+  -webkit-transition: all 0.5s ease-in-out .01s;
+  box-shadow: 0px 2px 3px #AAA;
+  &:hover {
+    border: solid 1px #D9D9D9;
+    box-shadow: 0px 4px 9px #888;
+  }
+}
+
+.pagination-style {
+  a, span, em {
+    padding: 0.2em 0.5em;
+    margin-right: 1px;
+  }
+  .disabled {
+    color: #999999;
+    border: 1px solid #dddddd;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2E2F30;
+    color: white;
+    border: 1px solid #252627;
+  }
+  a {
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #777;
+    &:hover,
+    &:focus {
+      color: #444;
+      border-color: #333;
+    }
+  }
+  margin: 15px 0px;
+}
+
+/* Typography */

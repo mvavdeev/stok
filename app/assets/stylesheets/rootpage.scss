@@ -1,0 +1,88 @@
+html { height: 100% }
+
+body {
+  height: 100%;
+}
+
+.top-padding { padding-top: 50px; }
+
+#logo {
+  float: left;
+  padding-top: 17px;
+  font-size: 21px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-decoration: none;
+  font-family: 'Courgette', cursive;
+  text-shadow: 1px 1px #AAA;
+  &:hover {
+    color: darkgray;
+
+  }
+}
+
+.search-bar {
+  padding: 14px 15px 10px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: #777;
+  label {
+    font-weight: initial;
+  }
+}
+
+.footer-padding {
+  padding-top: 30px;
+  clear: both;
+}
+
+footer {
+  position: fixed;
+  z-index: 150;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  color: #777;
+  background: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+  .footer-copyright {
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+    #copyright {
+      color: darkgray;
+      &:hover {
+        color: darkslategray;
+      }
+    }
+  }
+}
+
+/* Typography */
+
+a {
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: #666;
+  }
+  text-decoration: none;
+  color: #323232;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Bree Serif', serif;
+  text-shadow: 1px 1px #BFBFBF;
+}
+
+p,
+span,
+a,
+label {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.1em;
+}

@@ -1,0 +1,15 @@
+<% provide(:title, "Photos") %>
+<div class="container-fluid products-box text-center">
+  <header class="page-header">
+    <h1 class="text-center">Available Photos</h1>
+  </header>
+
+      <%= render @products %>
+
+  <% if signed_in? && current_user.admin? %>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <%= link_to 'New Product', new_product_path %>
+  </div>
+  <% end %>
+  <%= will_paginate @products, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-style text-center" %>
+</div>

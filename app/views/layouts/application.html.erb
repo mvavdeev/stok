@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render '/layouts/head_tags' %>
+  </head>
+  <body>
+    <%= render '/layouts/navbar' %>
+    <div class="top-padding"></div>
+    <%= render '/layouts/messages' %>
+    <div class="container fill-height">
+      <div class="row fill-height">
+          <%= yield %>
+      </div>
+    </div>
+    <%= render '/layouts/footer' %>
+  </body>
+</html>

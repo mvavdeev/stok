@@ -1,0 +1,17 @@
+<% provide(:title, @product.name) %>
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 products-box
+text-center">
+  <%= render 'shared/product' %>
+  <%= render 'new_comment' %>
+  <%= render 'comments' %>
+  <%= will_paginate @comments, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-style text-center" %>
+  <div>
+    <br>
+    <% if signed_in? && current_user.admin? %>
+        <%= link_to '<span class="glyphicon glyphicon-remove"></span>Delete'.html_safe, product_path(@product), method: :delete, data: { confirm: 'Are you sure that you want to delete this product?' }, class: "btn btn-default" %> |
+        <%= link_to '<span class="glyphicon glyphicon-pencil"></span>Edit'.html_safe, edit_product_path(@product), class:
+        "btn btn-default" %> |
+    <% end %>
+    <%= link_to '<span class="glyphicon glyphicon-arrow-left"></span> Back to Products Listing'.html_safe, products_path, class: "btn btn-default" %>
+  </div>
+</div>
